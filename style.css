@@ -1,65 +1,147 @@
-body {
-    margin: 0px;
-    padding: 0px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Baloo 2', cursive;
   }
   
-  .card {
-    width: 95%;
-    margin: 0 auto;
+  .container {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url(images/bg1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   
-  .navbar {
-    background-color: #c8c8fa !important;
+  nav {
+    width: 100%;
+    height: 12vh;
+    background-color: #00000052;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
   }
   
-  .nav-img {
-    height: 50px;
-    width: 50px;
-    border-radius: 125px;
+  nav .logo {
+    width: 25%;
+    text-align: center;
+    font-size: 18px;
+    text-shadow: 3px 4px 2px black;
   }
   
-  .carousel-item > img {
-    max-width: 100%;
-    height: auto;
+  nav .menu {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
   }
   
-  h1 {
-    color: #3a3aa3 !important;
-  }
-  @media (min-width: 1400px) {
-    .carousel {
-      height: 800px;
-      overflow: hidden;
-    }
+  nav .menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 2px;
+    position: relative;
   }
   
-  @media (min-width: 1200px) {
-    .carousel {
-      height: 600px;
-      overflow: hidden;
-    }
+  nav .menu a:hover {
+    color: #00fc13;
   }
   
-  /* @media (max-width: 992px) {
-    .container {
-      background-color: blue;
-    }
+  nav .menu a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #b200fc;
+    transition: all 0.3s linear;
   }
   
-  @media (max-width: 768px) {
-    .container {
-      background-color: aliceblue;
-    }
+  nav .menu a:hover::before {
+    width: 100%;
   }
   
-  @media (max-width: 567px) {
-    .container {
-      background-color: aqua;
-    }
+  nav .menu a:first-child {
+    color: #00fc13;
   }
   
-  @media (min-width: 1400px) {
-    .container {
-      background-color: purple;
-    }
-  } */
+  main {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+  }
+  
+  section h3 {
+    font-size: 33px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 1px #000;
+  }
+  
+  section h1 {
+    margin: 14px 0px 18px 0;
+    font-size: 45px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px #000;
+  }
+  
+  section p {
+    font-size: 20px;
+    text-shadow: 1px 1px 1px #000;
+    margin-bottom: 45px;
+  }
+  
+  section a {
+    padding: 9px 30px;
+    border-radius: 4px;
+    outline: none;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 14px;
+  }
+  
+  section .btn1 {
+    background-color: #fff;
+    color: black;
+  }
+  
+  section .btn1:hover {
+    background-color: #000;
+    color: #fff;
+    transition: all 0.3s linear;
+  }
+  
+  section .btn2 {
+    background-color: #00fc13;
+    color: black;
+  }
+  
+  section .btn2:hover {
+    background-color: #b200fc;
+    color: #fff;
+    transition: all 0.3s linear;
+  }
+  
+  .nameslideshow:after {
+    color: #00fc13;
+    animation: changename 7s infinite linear;
+    content: '';
+  }
+  
+  @keyframes changename{
+    0% { content: "Portrait"}
+    25% { content: "Landscape"}
+    50% { content: "Editorial"}
+    75% { content: "Event"}
+    100% { content: "Nature"}
+  }
